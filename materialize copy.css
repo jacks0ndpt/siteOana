@@ -3361,7 +3361,6 @@ input[type=range] + .thumb {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
 }
 
 .no-padding {
@@ -4514,7 +4513,7 @@ html {
 
 @media only screen and (min-width: 1200px) {
   html {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 
@@ -4888,11 +4887,10 @@ small {
 .card .card-image .card-title {
   color: #fff;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   max-width: 100%;
   padding: 24px;
-  font-size: 25px;
   }
 
 .card .card-content {
