@@ -9268,11 +9268,22 @@ input[type=range]::-ms-thumb {
 /** GRID SERVICII TEST**/
 
 .gridservicii{
+  word-wrap: break-word;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   background-color: red;
   padding: 10px;
   place-items: center;
   align-content: center;
+}
 
+.servicii-item {
+  word-break: break-word;  
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .gridservicii {
+      display: block;
+  }
 }
