@@ -130,7 +130,7 @@
   
   <div class="container" >
     
-    <div class="row">
+    <div class="row hidden">
       <h4 class="center"><span class="green-text">Despre</span><span class="brown-text"> mine</span></h4>
       <p class="flow-text" >
         Sunt Oana  si ascult povestile oamenilor din postura de psihoterapeut. De fiecare data simt ca sunt in fata a ceva foarte pretios si cu multa grija, acolo unde este cazul, rescriem povestile impreuna. 
@@ -183,38 +183,38 @@
     <div>
       
     </div> 
-    <div class="servicii-item">
-        <div class="card-panel yellow darken-1 hoverable">
+    <div class="servicii-item hidden ">
+        <div class="card-panel yellow darken-1 hoverable ">
           <i class="material-icons large text">mood</i>
           <a href="Servicii.html#1"><h4 style="font-size:clamp(20px, 2vw, 50px); margin:0;">Psihoterapie individuala</h4></a>
           
         </div>
       </div>
-      <div class="servicii-item" >
-        <div class="card-panel yellow darken-1 hoverable">
+      <div class="servicii-item hidden " >
+        <div class="card-panel yellow darken-1 hoverable ">
           <i class="material-icons large yellow darken-1 text">visibility</i>
           <a href="Servicii.html#2"><h4 style="font-size:clamp(20px, 2vw, 50px);margin:0;">Psihoterapie de cuplu</h4></a>
          
         </div>
       </div>
-      <div class="servicii-item" >
-        <div class="card-panel yellow darken-1 hoverable">
+      <div class="servicii-item hidden " >
+        <div class="card-panel yellow darken-1 hoverable ">
           <i class="material-icons large yellow darken-1 text">people</i>
           <a href="Servicii.html#3"><h4 style="font-size:clamp(20px, 2vw, 50px);margin:0;">Consiliere si dezvoltare personala</h4></a>
           
         </div>
         </div>
-        <div class="servicii-item">
-          <div class="card-panel yellow darken-1 hoverable">
+        <div class="servicii-item hidden ">
+          <div class="card-panel yellow darken-1 hoverable ">
             <i class="material-icons large yellow darken-1 text">people</i>
             <a href="Servicii.html#4"><h4 style="font-size:clamp(20px, 2vw, 50px);margin:0;">Grupuri de suport si dezvoltare personala. Psihoterapie de grup</h4></a>
             
           </div>
         </div>
-        <div class="servicii-item">
-          <div class="card-panel yellow darken-1 hoverable">
+        <div class="servicii-item hidden ">
+          <div class="card-panel yellow darken-1 hoverable ">
             <i class="material-icons large yellow darken-1 text">people</i>
-            <a href="Servicii.html#5"><h4 style="font-size:clamp(20px, 2vw, 50px);margin:0;">Servicii corporate</h4></a>
+            <a href="Servicii.html#5"><h4 style="font-size:clamp(20px, 2vw, 50px);margin:0;">Servicii corporate</h4>
             
           </div>
         </div>
@@ -338,7 +338,21 @@ navigator.clipboard.writeText
     ("0040725681444");
 }
 </script>
+<script>
 
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+    })
+})
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
+</script>
 
     </body>
   </html>
